@@ -1,24 +1,27 @@
-## Installation
-1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
-
-2) Git clone the [client](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow).
-There is no need to install anything. You only cloned the settings of the dialogflow client. When you made the desired changes to the lisa client and are satisfied with the outcome, make sure to:
-    * restore the fulfillment url to `https://immense-fjord-88389.herokuapp.com`
-    * export the settings as zip [here](https://dialogflow.cloud.google.com/#/editAgent)
-    * unpack the zip in the root directory you cloned this repository in
-    * ```
+# Introduction
+This repository is just a vcs of the current settings in DialogFlow. If you made changes to the lisa dialogflow client and are satisfied with the outcome, make sure to:
+   * restore the fulfillment url to `https://immense-fjord-88389.herokuapp.com`
+   * export the settings as zip [here](https://dialogflow.cloud.google.com/#/editAgent)
+   * unpack the zip in the root directory you cloned this repository in
+   * ```
       $ git commit
       $ git push
       ```
-    If you messed something up, you can just clone this repository as zip from github and upload it to the dialogflow client.
+   If you messed something up, you can just clone this repository as zip from github and upload it to the dialogflow client.
+
+## Installation
+1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
+
+2) [Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the client as zip.
+There is no need to install anything. The zip you downloaded will be used to quickly set up DialogFlow.
 
 3) Make the server available online using either serveo or a heroku link<br>
   To use Serveo, run this in your terminal window:
     ```
     $ ssh -R 80:localhost:5000 serveo.net 
     ```
-    You might need to type `yes` if a warning is thrown. The https link in green is your server URL
-  
+    You might need to type `yes` if a warning is thrown. The https link in green is your server URL<br>
+    <br>
     Serveo is a nice tool to use while developing: https://serveo.net/
     It streams your server to the adress Serveo sets up for you. You can use this adress in DialogFlow/fulfillment.
     The link look likes this:(this one does not work)
