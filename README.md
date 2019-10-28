@@ -2,7 +2,7 @@
 1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
 
 2) Git clone the [client](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow).
-There is no need to install anything. You only cloned the settings of the dialogflow client. When you made changes to this account, and are satisfied with the outcome, make sure to:
+There is no need to install anything. You only cloned the settings of the dialogflow client. When you made the desired changes to the lisa client and are satisfied with the outcome, make sure to:
     * restore the fulfillment url to `https://immense-fjord-88389.herokuapp.com`
     * export the settings as zip [here](https://dialogflow.cloud.google.com/#/editAgent)
     * unpack the zip in the root directory you cloned this repository in
@@ -25,15 +25,22 @@ There is no need to install anything. You only cloned the settings of the dialog
     https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
 
 4) Connect LISA to your local database:<br>
-  Log in to her development account [here](https://dialogflow.cloud.google.com/#/agent/4a47a0e1-bb7b-4c50-aad5-b8c1c1e5877c/fulfillment) and add `<your server URl>`/google-menus you obtained in step 2 as a webhook in the fulfillment tab<br>
-  Google ID: lisbluewinlis@gmail.com<br>
-  For the password, please contact Rein<br>
-  <br>
   <b>WARNING:</b> [this](https://dialogflow.cloud.google.com/#/agent/e4ee0583-d68d-4127-a8bd-49f3522ded28/intents) is the account used in production. Only make changes if a new backend version is deployed, otherwise you will break it
   Google ID: lisa.vitalis.assistant@gmail.com<br>
-  For the password, please contact Rein
+  For the password, please contact Rein<br>
+  <br>
+  For privacy reasons, it's best to use your personal Google account and create a new agent:
+  * Go to [Google Actions](https://console.actions.google.com) and create a new project
+  * Scroll down and choose Actions SDK
+  * Set up an invocation, preferrably 'de Kok' and save it
+  * Go to the actions tab and add an action. Under custom intent, press `Build`
+  * You will be redirected to the dialogflow website where a new agent can be created.
+  * Make sure to set the language to Dutch (NL)
+  * Once a new agent is created, import the settings like described in step 2.
+  * Enable Webhook in the fulfullment tab and fill in `<your server URl>`/google-menus as URL<br>
+  In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working
 
-5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with the development account. Ask 'Hey google, praat met de kok' which means 'Hey Google, talk to the chef'. It only works in Dutch.
+5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey google, praat met de kok' which means 'Hey Google, talk to the chef'
 
 6) Ask what the menu is for the day you made some items for. You can also ask for just the starter, main-course, dessert for a specific day.
 
