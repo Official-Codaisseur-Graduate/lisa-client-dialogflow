@@ -1,0 +1,29 @@
+[
+  {
+    "value": "Voorgerecht",
+    "synonyms": [
+      "Voorgerecht",
+      "Vooraf",
+      "Voorafje",
+      "Entree",
+      "Soep"
+    ]
+  },
+  {
+    "value": "Hoofdgerecht",
+    "synonyms": [
+      "Hoofdgerecht",
+      "Vlees",
+      "schotel"
+    ]
+  },
+  {
+    "value": "Nagerecht",
+    "synonyms": [
+      "Nagerecht",
+      "Toetje",
+      "Dessert",
+      "Toe"
+    ]
+  }
+]

@@ -1,0 +1,412 @@
+[
+  {
+    "id": "70d22c9a-2c30-41fe-a5b0-b853b03f98d7",
+    "data": [
+      {
+        "text": "Nagerecht",
+        "alias": "type",
+        "meta": "@gerecht",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "vanavond",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5535e0b0-736e-44fc-9801-c54c7461f0f7",
+    "data": [
+      {
+        "text": "Hoofdgerecht",
+        "alias": "type",
+        "meta": "@gerecht",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "vanavond",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "011887af-defa-491e-8bd9-5a53a256148e",
+    "data": [
+      {
+        "text": "Nagerecht",
+        "alias": "type",
+        "meta": "@gerecht",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "vandaag",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "007f35eb-31bc-4a65-a469-e123717e30f5",
+    "data": [
+      {
+        "text": "Hoofdgerecht",
+        "alias": "type",
+        "meta": "@gerecht",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "vandaag",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c0c4e043-cb54-4102-b1c3-31ad6e61137d",
+    "data": [
+      {
+        "text": "Menu ",
+        "userDefined": false
+      },
+      {
+        "text": "vanavond",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "56c8041d-3bc1-41a2-973d-d4a8aff11a42",
+    "data": [
+      {
+        "text": "Menu ",
+        "userDefined": false
+      },
+      {
+        "text": "vandaag",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4e05083f-090f-4037-b8cd-ae46f07d1d18",
+    "data": [
+      {
+        "text": "Het menu van ",
+        "userDefined": false
+      },
+      {
+        "text": "vanavond",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4bc7be64-5cf9-4ca6-9e69-61fde32e33dd",
+    "data": [
+      {
+        "text": "Menu van ",
+        "userDefined": false
+      },
+      {
+        "text": "vandaag",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "edaa9474-b157-46de-98e2-e4184d3e21a2",
+    "data": [
+      {
+        "text": "Het eten ",
+        "userDefined": false
+      },
+      {
+        "text": "vandaag",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4f97796e-d84d-41ca-9e66-387938a085c4",
+    "data": [
+      {
+        "text": "Het eten ",
+        "userDefined": false
+      },
+      {
+        "text": "vanavond",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "0be020b0-4f6a-4da0-9c69-4b50b5c46719",
+    "data": [
+      {
+        "text": "wat is het ",
+        "userDefined": false
+      },
+      {
+        "text": "nagerecht",
+        "alias": "type",
+        "meta": "@gerecht",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "morgen",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "41beabc3-0157-4fd2-bfb2-094fe01bd8cc",
+    "data": [
+      {
+        "text": "wat is het ",
+        "userDefined": false
+      },
+      {
+        "text": "hoofdgerecht",
+        "alias": "type",
+        "meta": "@gerecht",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "vanavond",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "27d810c9-b6ed-4c53-baf3-d095ff0937dd",
+    "data": [
+      {
+        "text": "wat is het ",
+        "userDefined": false
+      },
+      {
+        "text": "nagerecht",
+        "alias": "type",
+        "meta": "@gerecht",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "75d8a73d-5e48-40bc-a52c-d473082b4435",
+    "data": [
+      {
+        "text": "wat is het ",
+        "userDefined": false
+      },
+      {
+        "text": "hoofdgerecht",
+        "alias": "type",
+        "meta": "@gerecht",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7af8a07b-a5e7-4519-ad87-29e964f12605",
+    "data": [
+      {
+        "text": "Wat is het ",
+        "userDefined": false
+      },
+      {
+        "text": "voorgerecht",
+        "alias": "type",
+        "meta": "@gerecht",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "10c4ed0b-9699-42c4-bd0c-f71ac8e25777",
+    "data": [
+      {
+        "text": "Wat is het menu voor ",
+        "userDefined": false
+      },
+      {
+        "text": "vanavond",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f4c1a82b-f520-4c2a-b218-bfbffd013f52",
+    "data": [
+      {
+        "text": "Wat eten we ",
+        "userDefined": false
+      },
+      {
+        "text": "vanavond",
+        "alias": "date",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

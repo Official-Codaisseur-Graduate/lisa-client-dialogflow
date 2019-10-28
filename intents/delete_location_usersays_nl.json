@@ -1,0 +1,62 @@
+[
+  {
+    "id": "614ca2d7-cf68-4ee1-91d8-770115e4f712",
+    "data": [
+      {
+        "text": "Stel locatie opnieuw in",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "cced030f-3eb7-4fb3-8ea5-38488c8a18d6",
+    "data": [
+      {
+        "text": "Locatie wissen",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1e4e26d6-d0cd-4994-a601-8dabf7fecba8",
+    "data": [
+      {
+        "text": "Reset locatie",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "cc02e7db-d3fa-4bef-b628-d1eac1bcdea8",
+    "data": [
+      {
+        "text": "Vergeet locatie",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "96b1326d-0257-4f66-8f47-840d9f8d6053",
+    "data": [
+      {
+        "text": "Verwijder locatie",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

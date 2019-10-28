@@ -1,0 +1,42 @@
+{
+  "id": "d9abe51a-4723-4cf5-808f-2d4fddbbd1d7",
+  "name": "close_conversation",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "nl",
+          "condition": "",
+          "speech": [
+            "Tot ziens",
+            "Fijne dag",
+            "Prima, tot ziens",
+            "Prima, fijne dag",
+            "Oké, fijne dag",
+            "Oké, tot ziens"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "actions_intent_CANCEL"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
