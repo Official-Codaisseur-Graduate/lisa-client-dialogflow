@@ -39,7 +39,7 @@
   },
   "defaultTimezone": "Europe/Madrid",
   "webhook": {
-    "url": "https://terreo.serveo.net/google-menus",
+    "url": "https://immense-fjord-88389.herokuapp.com",
     "username": "",
     "headers": {
       "": ""

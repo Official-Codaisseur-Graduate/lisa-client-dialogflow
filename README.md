@@ -3,6 +3,7 @@
 
 2) Git clone the [client](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow).
 There is no need to install anything. You only cloned the settings of the dialogflow client. When you made changes to this account, and are satisfied with the outcome, make sure to:
+    * restore the fulfillment url to `https://immense-fjord-88389.herokuapp.com`
     * export the settings as zip [here](https://dialogflow.cloud.google.com/#/editAgent)
     * unpack the zip in the root directory you cloned this repository in
     * ```
@@ -13,18 +14,18 @@ There is no need to install anything. You only cloned the settings of the dialog
 
 3) Make the server available online using either serveo or a heroku link<br>
   To use Serveo, run this in your terminal window:
-      ```
-      $ ssh -R 80:localhost:5000 serveo.net 
-      ```
-      You might need to type `yes` if a warning is thrown. The https link in green is your server URL
+    ```
+    $ ssh -R 80:localhost:5000 serveo.net 
+    ```
+    You might need to type `yes` if a warning is thrown. The https link in green is your server URL
   
     Serveo is a nice tool to use while developing: https://serveo.net/
     It streams your server to the adress Serveo sets up for you. You can use this adress in DialogFlow/fulfillment.
     The link look likes this:(this one does not work)
-    https://dialogflow.cloud.google.com/#/agent/<random numbers and letters>/fulfillment
+    https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
 
 4) Connect LISA to your local database:<br>
-  Log in to her development account [here](https://dialogflow.cloud.google.com/#/agent/4a47a0e1-bb7b-4c50-aad5-b8c1c1e5877c/fulfillment) and add <your server URL>/google-menus you obtained in step 2 as a webhook in the fulfillment tab<br>
+  Log in to her development account [here](https://dialogflow.cloud.google.com/#/agent/4a47a0e1-bb7b-4c50-aad5-b8c1c1e5877c/fulfillment) and add `<your server URl>`/google-menus you obtained in step 2 as a webhook in the fulfillment tab<br>
   Google ID: lisbluewinlis@gmail.com<br>
   For the password, please contact Rein<br>
   <br>
