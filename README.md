@@ -25,20 +25,20 @@ There is no need to install anything. You only cloned the settings of the dialog
     https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
 
 4) Connect LISA to your local database:<br>
-  <b>WARNING:</b> [this](https://dialogflow.cloud.google.com/#/agent/e4ee0583-d68d-4127-a8bd-49f3522ded28/intents) is the account used in production. Only make changes if a new backend version is deployed, otherwise you will break it
+  <b>WARNING:</b> [this](https://dialogflow.cloud.google.com/#/agent/e4ee0583-d68d-4127-a8bd-49f3522ded28/intents) is the account used in production. Only make changes if a new backend version is deployed, otherwise you will break it<br>
   Google ID: lisa.vitalis.assistant@gmail.com<br>
   For the password, please contact Rein<br>
-  <br>
-  For privacy reasons, it's best to use your personal Google account and create a new agent:
-  * Go to [Google Actions](https://console.actions.google.com) and create a new project
-  * Scroll down and choose Actions SDK
-  * Set up an invocation, preferrably 'de Kok' and save it
-  * Go to the actions tab and add an action. Under custom intent, press `Build`
-  * You will be redirected to the dialogflow website where a new agent can be created.
-  * Make sure to set the language to Dutch (NL)
-  * Once a new agent is created, import the settings like described in step 2.
-  * Enable Webhook in the fulfullment tab and fill in `<your server URl>`/google-menus as URL<br>
-  In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working
+     <br>
+     For privacy reasons, it's best to use your personal Google account and create a new agent:
+     * Go to [Google Actions](https://console.actions.google.com) and create a new project
+     * Scroll down and choose Actions SDK
+     * Set up an invocation, preferrably 'de Kok' and save it
+     * Go to the actions tab and add an action. Under custom intent, press `Build`
+     * You will be redirected to the dialogflow website where a new agent can be created.
+     * Make sure to set the language to Dutch (NL)
+     * Once a new agent is created, import the settings like described in step 2.
+     * Enable Webhook in the fulfullment tab and fill in `<your server URl>`/google-menus as URL<br>
+     In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working
 
 5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey google, praat met de kok' which means 'Hey Google, talk to the chef'
 
