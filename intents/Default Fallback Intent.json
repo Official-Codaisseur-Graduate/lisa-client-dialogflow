@@ -14,7 +14,10 @@
           "type": 0,
           "lang": "nl",
           "condition": "",
-          "speech": "Ik heb geen antwoord op deze vraag"
+          "speech": [
+            "Ik begrijp het niet.",
+            "Ik versta het niet."
+          ]
         }
       ],
       "defaultResponsePlatforms": {},

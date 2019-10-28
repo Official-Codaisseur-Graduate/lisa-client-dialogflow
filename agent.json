@@ -18,8 +18,7 @@
     ],
     "systemIntents": [],
     "endIntentIds": [
-      "d9abe51a-4723-4cf5-808f-2d4fddbbd1d7",
-      "d7f7fc67-97b7-4b0d-a569-3d4cdb83996e"
+      "67b3bfd7-2092-4534-b149-3b8bbb99b858"
     ],
     "oAuthLinking": {
       "required": false,
@@ -39,7 +38,7 @@
   },
   "defaultTimezone": "Europe/Madrid",
   "webhook": {
-    "url": "https://immense-fjord-88389.herokuapp.com",
+    "url": "https://immense-fjord-88389.herokuapp.com/google-menus",
     "username": "",
     "headers": {
       "": ""

@@ -1,18 +1,12 @@
 {
   "id": "67b3bfd7-2092-4534-b149-3b8bbb99b858",
-  "name": "fetch_menu",
+  "name": "Menu opvragen",
   "auto": true,
   "contexts": [],
   "responses": [
     {
-      "resetContexts": true,
-      "affectedContexts": [
-        {
-          "name": "Menuopvragen-followup",
-          "parameters": {},
-          "lifespan": 2
-        }
-      ],
+      "resetContexts": false,
+      "affectedContexts": [],
       "parameters": [
         {
           "id": "14fe7b59-00d4-4de8-9905-84e61d0c4f7b",
@@ -45,6 +39,18 @@
           "lang": "nl",
           "condition": "",
           "speech": []
+        },
+        {
+          "type": 0,
+          "lang": "nl",
+          "condition": "",
+          "speech": []
+        },
+        {
+          "type": 4,
+          "lang": "nl",
+          "condition": "",
+          "payload": {}
         }
       ],
       "defaultResponsePlatforms": {
