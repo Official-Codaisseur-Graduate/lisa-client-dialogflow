@@ -1,3 +1,6 @@
 {
   "version": "1.0.0"
+  "scripts": {
+    "zip": "zip -r myarchive.zip . -x \"*.DS_Store\""
+  }
 }
