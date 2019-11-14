@@ -12,15 +12,15 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
 ## Installation
 1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
 
-2) 
-<b>For development purpose</b>:<br>
-[Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.<br>
-<br>
-<b>For production purpose</b>:<br>
-[Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the Dialogflow client master as zip.<br>
-<br>
-<b>Both</b>Both:
-There is no need to install anything. The zip you downloaded will be used to quickly set up DialogFlow.
+2) Download Zip File
+   <b>For development purpose</b>:<br>
+   [Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.<br>
+   <br>
+   <b>For production purpose</b>:<br>
+   [Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the Dialogflow client master as zip.<br>
+   <br>
+   <b>Both</b>:<br>
+   There is no need to install anything. The zip you downloaded will be used to quickly set up DialogFlow.
 
 3) Make your local server available online using either serveo, localtunnel or a heroku link<br>
   To use Serveo, run this in your terminal window:
@@ -59,13 +59,14 @@ There is no need to install anything. The zip you downloaded will be used to qui
      * Once a new agent is created, go to the settings of the agent, click on Export and Import, and import the zip file like described in step 2. If master and development are in sync, you can download either or. If master is behind development, download the development zip to see the latest version of the code.
      * Enable Webhook in the fulfullment tab and fill in `<your local server URl>`/google-menus as URL<br>
      * To integrate the agent with the Google Assistant, click on the integrations tab and go to Google Assistant. Check if all the intents are showing up, if not add them yourself manually (they should show up if you click on "add intent"). When you are finished, click on test. If everything is set up correctly, you are back in your Google Actions Test enviornment
-     <br>
-     <b>WARNING</b> Does this step doesnt work, and you receive an "Permisson access denied"-error? Most likely the accounts on Dialog Flow and your Google Actions are not the same. You can check this by going to the settings of your agent, click on the Share tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
      * The agent you created is a new project in your [Google Actions](https://console.actions.google.com). Click on the name of the agent you created.
      * Go to 'decide how your action in invoked'
      * Set up an invocation, preferrably 'de Kok' and save it
      * Make sure to set the language to Dutch (NL)
      * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working
+     <br>
+     <b>WARNING</b> Does this step doesnt work, and you receive an "Permisson access denied"-error? Most likely the accounts on Dialog Flow and your Google Actions are not the same. You can check this by going to the settings of your agent, click on the Share tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
+     
 
 5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey Google, praat met de kok' which means 'Hey Google, talk to the chef'
 
