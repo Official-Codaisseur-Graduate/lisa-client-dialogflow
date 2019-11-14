@@ -12,7 +12,7 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
 ## Installation
 1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
 
-2) Download Zip File
+2) Download Zip File<br>
    <b>For development purpose</b>:<br>
    [Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.<br>
    <br>
@@ -22,8 +22,8 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
    <b>Both</b>:<br>
    There is no need to install anything. The zip you downloaded will be used to quickly set up DialogFlow.
 
-3) Make your local server available online using either serveo, localtunnel or a heroku link<br>
-  To use Serveo, run this in your terminal window:
+3) Make your local server available online using either Serveo, Localtunnel or a Heroku link<br>
+  To use **Serveo**, run this in your terminal window:
     ```
     $ ssh -R 80:localhost:5000 serveo.net 
     ```
@@ -35,7 +35,7 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
     https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
     <br>
     <br>
-   If Serveo doesn't work, you can try Localtunnel. To use LocalTunner:<br>
+   If Serveo doesn't work, you can try **Localtunnel**. To use LocalTunner:<br>
     Install Localtunnel globally (requires NodeJS) to make it accessible anywhere:
     ```
     npm install -g localtunnel
@@ -48,23 +48,24 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
 
 4) Connect LISA to your local database:<br>
   <b>WARNING:</b> [this](https://dialogflow.cloud.google.com/#/agent/e4ee0583-d68d-4127-a8bd-49f3522ded28/intents) is the account used in production. Only make changes if a new backend version is deployed, otherwise you will break it<br>
+  **Production Account**<br>
   Google ID: lisa.vitalis.assistant@gmail.com<br>
   For the password, please contact Rein<br>
      <br>
      For privacy reasons, it's best to use your personal Google account and create a new agent:
      * Log out of all your Google Accounts and delete the information in your local storage before only logging in with your personal Google account to make sure you continue the next steps with the right account.
-     * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. **NOTE** Dialogflow logs in with the google account you are logged in with automatically. Make sure this is with your personal account.
+     * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. **NOTE** Dialogflow logs in with the Google account you are logged in with automatically. Make sure this is with your personal account.
      * Create a new agent. Besides adding a name, you should see the option to set the default language. Make sure the default language is *Dutch*. If you don't see this option. Refresh page and try again.
-     * Once a new agent is created, go to the settings of the agent, click on *Export and Import* and import the zip file like described in step 2.
+     * Once a new agent is created, go to the settings of the agent, click on *Export and Import* and import the zip file from step 2.
      * Enable Webhook in the fulfullment tab and fill in `<your local server URl>`/google-menus as URL<br>
-     * To integrate the agent with the Google Assistant, click on the *integrations* tab and go to Google Assistant. Check if all the intents are showing up. If not, add them manually (the intents should show up if you click on *add intent*). When you are finished, click on test. If everything is set up correctly, you directed to your Google Actions Test environment.
+     * To integrate the agent with the Google Assistant, click on the *integrations* tab and go to Google Assistant. Check if all the intents are showing up. If not, add them manually (the intents should show up if you click on *add intent*). When you are finished, click on test. If everything is set up correctly, you directed to your Google Actions test environment.
      * The agent you created is a new project in your [Google Actions](https://console.actions.google.com). Click on the name of the agent you created.
      * Go to *Decide how your action in invoked*.
      * Set up an invocation, preferrably 'de Kok' and save it.
      * Make sure to set the language to Dutch (NL).
      * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working.
      <br>
-     <b>WARNING</b> Does the testing not work, and you receive an "Permisson access denied"-error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent, click on the Share tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
+     <b>WARNING</b> Does the testing not work, and you receive an "Permisson access denied"-error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent, click on the *Share* tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
      
 
 5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey Google, praat met de kok' which means 'Hey Google, talk to the chef'
