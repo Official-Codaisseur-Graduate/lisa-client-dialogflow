@@ -59,13 +59,15 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
      * Once a new agent is created, go to the settings of the agent, click on *Export and Import* and import the zip file from step 2.
      * Enable Webhook in the fulfullment tab and fill in `<your local server URl>`/google-menus as URL<br>
      * To integrate the agent with the Google Assistant, click on the *integrations* tab and go to Google Assistant. Check if all the intents are showing up. If not, add them manually (the intents should show up if you click on *add intent*). When you are finished, click on test. If everything is set up correctly, you directed to your Google Actions test environment.
-     * The agent you created is a new project in your [Google Actions](https://console.actions.google.com). Click on the name of the agent you created.
+     * The agent you created is a new project in your [Google Actions](https://console.actions.google.com). Go to Google Actions and click on the name of the agent you created.
      * Go to *Decide how your action is invoked*.
      * Set up an invocation, preferrably 'de Kok' and save it.
      * Make sure to set the language to Dutch (NL).
      * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working.
      <br>
-     <b>WARNING</b> Does the testing not work, and you receive an "Permisson access denied"-error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent, click on the *Share* tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
+     <b>Something went wrong?</b> Does the testing not work, and you receive a *Permisson access denied*-error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent in Dialogflow. Click on the *Share* tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
+     <br>
+     If you are in your testing environment, but the fetch-menu intent doesn't work, fetch a new Serveo or Localtunnel link and connect that as your webhook.
      
 
 5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey Google, praat met de kok' which means 'Hey Google, talk to the chef'
