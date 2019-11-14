@@ -53,19 +53,18 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
      <br>
      For privacy reasons, it's best to use your personal Google account and create a new agent:
      * Log out of all your Google Accounts and delete the information in your local storage before only logging in with your personal Google account to make sure you continue the next steps with the right account.
-     * Go to [Google Actions](https://console.actions.google.com) and create a new project
-     * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. It logs in with the google account you are logged in with automatically. Make sure this is with your personal account.
-     * In Dialogflow, create a new agent. Besides adding a name, you should see the option to set the default language. If you don't see this option. Refresh page and try again.
-     * Once a new agent is created, go to the settings of the agent, click on Export and Import, and import the zip file like described in step 2. If master and development are in sync, you can download either or. If master is behind development, download the development zip to see the latest version of the code.
+     * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. **NOTE** Dialogflow logs in with the google account you are logged in with automatically. Make sure this is with your personal account.
+     * Create a new agent. Besides adding a name, you should see the option to set the default language. Make sure the default language is *Dutch*. If you don't see this option. Refresh page and try again.
+     * Once a new agent is created, go to the settings of the agent, click on *Export and Import* and import the zip file like described in step 2.
      * Enable Webhook in the fulfullment tab and fill in `<your local server URl>`/google-menus as URL<br>
-     * To integrate the agent with the Google Assistant, click on the integrations tab and go to Google Assistant. Check if all the intents are showing up, if not add them yourself manually (they should show up if you click on "add intent"). When you are finished, click on test. If everything is set up correctly, you are back in your Google Actions Test enviornment
+     * To integrate the agent with the Google Assistant, click on the *integrations* tab and go to Google Assistant. Check if all the intents are showing up. If not, add them manually (the intents should show up if you click on *add intent*). When you are finished, click on test. If everything is set up correctly, you directed to your Google Actions Test environment.
      * The agent you created is a new project in your [Google Actions](https://console.actions.google.com). Click on the name of the agent you created.
-     * Go to 'decide how your action in invoked'
-     * Set up an invocation, preferrably 'de Kok' and save it
-     * Make sure to set the language to Dutch (NL)
-     * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working
+     * Go to *Decide how your action in invoked*.
+     * Set up an invocation, preferrably 'de Kok' and save it.
+     * Make sure to set the language to Dutch (NL).
+     * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working.
      <br>
-     <b>WARNING</b> Does this step doesnt work, and you receive an "Permisson access denied"-error? Most likely the accounts on Dialog Flow and your Google Actions are not the same. You can check this by going to the settings of your agent, click on the Share tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
+     <b>WARNING</b> Does the testing not work, and you receive an "Permisson access denied"-error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent, click on the Share tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
      
 
 5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey Google, praat met de kok' which means 'Hey Google, talk to the chef'
