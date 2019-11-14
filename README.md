@@ -12,10 +12,17 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
 ## Installation
 1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
 
-2) [Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the client as zip.
+2) 
+<b>For development purpose</b>:<br>
+[Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.<br>
+<br>
+<b>For production purpose</b>:<br>
+[Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the Dialogflow client master as zip.<br>
+<br>
+<b>Both</b>Both:
 There is no need to install anything. The zip you downloaded will be used to quickly set up DialogFlow.
 
-3) Make the server available online using either serveo or a heroku link<br>
+3) Make your local server available online using either serveo, localtunnel or a heroku link<br>
   To use Serveo, run this in your terminal window:
     ```
     $ ssh -R 80:localhost:5000 serveo.net 
@@ -26,6 +33,18 @@ There is no need to install anything. The zip you downloaded will be used to qui
     It streams your server to the adress Serveo sets up for you. You can use this adress in DialogFlow/fulfillment.
     The link look likes this:(this one does not work)
     https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
+    <br>
+    <br>
+   If Serveo doesn't work, you can try Localtunnel. To use LocalTunner:<br>
+    Install Localtunnel globally (requires NodeJS) to make it accessible anywhere:
+    ```
+    npm install -g localtunnel
+    ```
+   Start a webserver on some local port (eg http://localhost:8000) and use the command line interface to request a tunnel to your local server:
+   ```
+   lt --port 8000
+   ```
+   You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. Any requests will be routed to your local service at the specified port.
 
 4) Connect LISA to your local database:<br>
   <b>WARNING:</b> [this](https://dialogflow.cloud.google.com/#/agent/e4ee0583-d68d-4127-a8bd-49f3522ded28/intents) is the account used in production. Only make changes if a new backend version is deployed, otherwise you will break it<br>
@@ -33,15 +52,23 @@ There is no need to install anything. The zip you downloaded will be used to qui
   For the password, please contact Rein<br>
      <br>
      For privacy reasons, it's best to use your personal Google account and create a new agent:
+     * Log out of all your Google Accounts and delete the information in your local storage before only logging in with your personal Google account to make sure you continue the next steps with the right account.
      * Go to [Google Actions](https://console.actions.google.com) and create a new project
-     * Scroll down and choose Actions SDK
+     * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. It logs in with the google account you are logged in with automatically. Make sure this is with your personal account.
+     * In Dialogflow, create a new agent. Besides adding a name, you should see the option to set the default language. If you don't see this option. Refresh page and try again.
+
+     // CHECK FROM HERE
      * Set up an invocation, preferrably 'de Kok' and save it
      * Go to the actions tab and add an action. Under custom intent, press `Build`
      * You will be redirected to the dialogflow website where a new agent can be created.
      * Make sure to set the language to Dutch (NL)
-     * Once a new agent is created, import the settings like described in step 2.
-     * Enable Webhook in the fulfullment tab and fill in `<your server URl>`/google-menus as URL<br>
-     In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working
+     * Once a new agent is created, go to the settings of the agent, click on Export and Import, and import the zip file like described in step 2. If master and development are in sync, you can download either or. If master is behind development, download the development zip to see the latest version of the code.
+     * Enable Webhook in the fulfullment tab and fill in `<your local server URl>`/google-menus as URL<br>
+     * To integrate the agent with the Google Assistant, click on the integrations tab and go to Google Assistant. Check if all the intents are showing up, if not add them yourself in the drop down menu. When you are finished, click on test. If everything is set up correctly, you are back in your Google Actions Test enviornment
+     <br>
+     <b>WARNING</b> Does this step doesnt work, and you receive an "Permisson access denied"-error? Most likely the accounts on Dialog Flow and your Google Actions are not the same. You can check this by going to the settings of your agent, click on the Share tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
+
+     * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working
 
 5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey google, praat met de kok' which means 'Hey Google, talk to the chef'
 
