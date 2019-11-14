@@ -66,7 +66,7 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
      * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working.
      <br>
      <br>
-     **Possible Errors**
+     **Possible Errors**<br>
      <b>The testing envrionment will not load</b> Does the testing not work, and you receive a *Permisson access denied* error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent in Dialogflow. Click on the *Share* tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
      <br>
      <br>
