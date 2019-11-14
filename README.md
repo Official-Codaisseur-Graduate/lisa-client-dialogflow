@@ -52,7 +52,7 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
   Google ID: lisa.vitalis.assistant@gmail.com<br>
   For the password, please contact Rein<br>
      <br>
-     For privacy reasons, it's best to use your personal Google account and create a new agent:
+     For privacy reasons, it's best to **use your personal Google account and create a new agent**:
      * Log out of all your Google Accounts and delete the information in your local storage before only logging in with your personal Google account to make sure you continue the next steps with the right account.
      * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. **NOTE** Dialogflow logs in with the Google account you are logged in with automatically. Make sure this is with your personal account.
      * Create a new agent. Besides adding a name, you should see the option to set the default language. Make sure the default language is *Dutch*. If you don't see this option. Refresh page and try again.
@@ -60,7 +60,7 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
      * Enable Webhook in the fulfullment tab and fill in `<your local server URl>`/google-menus as URL<br>
      * To integrate the agent with the Google Assistant, click on the *integrations* tab and go to Google Assistant. Check if all the intents are showing up. If not, add them manually (the intents should show up if you click on *add intent*). When you are finished, click on test. If everything is set up correctly, you directed to your Google Actions test environment.
      * The agent you created is a new project in your [Google Actions](https://console.actions.google.com). Click on the name of the agent you created.
-     * Go to *Decide how your action in invoked*.
+     * Go to *Decide how your action is invoked*.
      * Set up an invocation, preferrably 'de Kok' and save it.
      * Make sure to set the language to Dutch (NL).
      * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working.
