@@ -46,9 +46,9 @@ Read the Docs for set-up and the latest status of the code - make sure to be in 
     ```
     npm install -g localtunnel
     ```
-   Start a webserver on some local port (eg http://localhost:8000) and use the command line interface to request a tunnel to your local server:
+   Start a webserver on some local port (eg http://localhost:5000) and use the command line interface to request a tunnel to your local server:
    ```
-   lt --port 8000
+   lt --port 5000
    ```
    You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. Any requests will be routed to your local service at the specified port.
 
