@@ -20,7 +20,6 @@ Read the Docs for set-up and the latest status of the code - make sure to be in 
 1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
 
 2) Download Zip File<br>
-<br>
    <b>For development purpose</b>:<br>
    [Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.<br>
    <br>
