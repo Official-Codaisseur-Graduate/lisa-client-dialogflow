@@ -7,7 +7,6 @@ This repository is the version control system of the current settings in DialogF
 - Installation Guide
 - Add Changes
 - Information about Dialogflow
-- Suggestions for the next group to work on this project (keep up-to-date!)
 
 ## Repositories in the LISA-project
 Read the Docs for set-up and the latest status of the code - make sure to be in the correct branch (development or any open branches that hasn't been merged into development yet). Only merge into the master branch if all the code in development is working and you've checked with Rein, because the master branch is already in production.<br>
@@ -141,12 +140,6 @@ When you are working with custom backend like Node.js with Express, you need to:
 
 [Dialogflow docs](https://cloud.google.com/dialogflow/docs/)
 
-# Suggestions
- - If a user doesn't want to share his/her location, add a feature that the Voice Assistant asks for the name of the retirement home, to go from there.
- - Some locations have the same zipcode and therefore coordinates. 
-   - It might be trouble if two locations are found based on the location finder. Test what will happen if two locations are found.
-   - The location with the same zip code, have the same menu, because they share the same kitchen (according to @Pittvandewitt who talked to the product owner of this project).
-- Test if you could ask for a menu on a specific date (not "tomorrow" but "the fifth of December", "next week", etc.)
 
 
 
