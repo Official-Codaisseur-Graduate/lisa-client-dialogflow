@@ -1,7 +1,17 @@
 # Introduction
-This repository is a version control system of the current settings in DialogFlow. It's part of the LISA Voice Assistant Project.
+This repository is the version control system of the current settings in DialogFlow. It's part of the LISA Voice Assistant Project.
 
-# Repositories in the LISA-project
+## Contents of this ReadMe-file
+- Introduction
+- Repositories in the LISA-project
+- Installation Guide
+- Add Changes
+- Information about Dialogflow
+- Suggestions for the next group to work on this project (keep up-to-date!)
+
+## Repositories in the LISA-project
+Read the Docs for set-up and the latest status of the code - make sure to be in the correct branch (development or any open branches that hasn't been merged into development yet). Only merge into the master branch if all the code in development is working and you've checked with Rein, because the master branch is already in production.<br>
+<br>
 - [LISA-server](https://github.com/Official-Codaisseur-Graduate/lisa-server)
 - [LISA-client](https://github.com/Official-Codaisseur-Graduate/lisa-client)
 - LISA Dialogflow - you are here!
@@ -10,6 +20,7 @@ This repository is a version control system of the current settings in DialogFlo
 1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
 
 2) Download Zip File<br>
+<br>
    <b>For development purpose</b>:<br>
    [Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.<br>
    <br>
@@ -44,12 +55,8 @@ This repository is a version control system of the current settings in DialogFlo
    You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. Any requests will be routed to your local service at the specified port.
 
 4) Connect LISA to your local database:<br>
-  <b>WARNING:</b> [this](https://dialogflow.cloud.google.com/#/agent/e4ee0583-d68d-4127-a8bd-49f3522ded28/intents) is the account used in production. Only make changes if a new backend version is deployed, otherwise you will break it<br>
-  **Production Account**<br>
-  Google ID: lisa.vitalis.assistant@gmail.com<br>
-  For the password, please contact Rein<br>
      <br>
-     For privacy reasons, it's best to **use your personal Google account and create a new agent**:
+     For privacy reasons, it's best to **use your personal Google account and create a new agent** for development purpose:
      * Log out of all your Google Accounts and delete the information in your local storage before only logging in with your personal Google account to make sure you continue the next steps with the right account.
      * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. **NOTE** Dialogflow logs in with the Google account you are logged in with automatically. Make sure this is with your personal account.
      * Create a new agent. Besides adding a name, you should see the option to set the default language. Make sure the default language is *Dutch*. If you don't see this option. Refresh page and try again.
@@ -75,6 +82,11 @@ This repository is a version control system of the current settings in DialogFlo
 6) Ask what the menu is for the day you made some items for. You can also ask for just the starter, main-course, dessert for a specific day.
 
 ## Add changes
+<b>WARNING:</b> [this](https://dialogflow.cloud.google.com/#/agent/e4ee0583-d68d-4127-a8bd-49f3522ded28/intents) is the account used in production. Only make changes if a new backend version is deployed, otherwise you will break it<br>
+  **Production Account**<br>
+  Google ID: lisa.vitalis.assistant@gmail.com<br>
+  For the password, please contact Rein<br>
+  <br>
 If you made changes to the lisa dialogflow client and are satisfied with the outcome, make sure to:
    * restore the fulfillment url to `https://immense-fjord-88389.herokuapp.com` (this is the back-end that's in development. It may be outdated, so check to make sure)
    * export the settings as zip [here](https://dialogflow.cloud.google.com/#/editAgent)
@@ -129,3 +141,15 @@ When you are working with custom backend like Node.js with Express, you need to:
 ![webhook-api.png](./webhook-api.png)
 
 [Dialogflow docs](https://cloud.google.com/dialogflow/docs/)
+
+# Suggestions
+ - If a user doesn't want to share his/her location, add a feature that the Voice Assistant asks for the name of the retirement home, to go from there.
+ - Some locations have the same zipcode and therefore coordinates. 
+   - It might be trouble if two locations are found based on the location finder. Test what will happen if two locations are found.
+   - The location with the same zip code, have the same menu, because they share the same kitchen (according to @Pittvandewitt who talked to the product owner of this project).
+- Test if you could ask for a menu on a specific date (not "tomorrow" but "the fifth of December", "next week", etc.)
+
+
+
+
+
