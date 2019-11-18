@@ -4,96 +4,16 @@ This repository is the version control system of the current settings in DialogF
 ## Contents of this ReadMe-file
 - Introduction
 - Repositories in the LISA-project
+- Information about Dialogflow
 - Installation Guide
 - Add Changes
-- Information about Dialogflow
 
 ## Repositories in the LISA-project
-Read the Docs for set-up and the latest status of the code - make sure to be in the correct branch (development or any open branches that hasn't been merged into development yet). Only merge into the master branch if all the code in development is working and you've checked with Rein, because the master branch is already in production.<br>
+NOTE: Read the Docs for set-up and the latest status of the code - make sure to use the correct branch (development or any open branches that hasn’t been merged into development yet). Only merge into the master branch if all the codes in development are working AND you have already checked with Rein.<br>
 <br>
 - [LISA-server](https://github.com/Official-Codaisseur-Graduate/lisa-server)
 - [LISA-client](https://github.com/Official-Codaisseur-Graduate/lisa-client)
 - LISA Dialogflow - you are here!
-
-## Installation
-1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
-
-2) Download Zip File<br>
-   <b>For development purpose</b>:<br>
-   [Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.<br>
-   <br>
-   <b>For production purpose</b>:<br>
-   [Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the Dialogflow client master as zip.<br>
-   <br>
-   <b>Both</b>:<br>
-   There is no need to install anything. The zip you downloaded will be used to quickly set up DialogFlow.
-
-3) Make your local server available online using either Serveo, Localtunnel or a Heroku link<br>
-  To use **Serveo**, run this in your terminal window:
-    ```
-    $ ssh -R 80:localhost:5000 serveo.net 
-    ```
-    You might need to type `yes` if a warning is thrown. The https link in green is your server URL<br>
-    <br>
-    Serveo is a nice tool to use while developing: https://serveo.net/
-    It streams your server to the adress Serveo sets up for you. You can use this adress in DialogFlow/fulfillment.
-    The link look likes this:(this one does not work)
-    https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
-    <br>
-    <br>
-   If Serveo doesn't work, you can try **Localtunnel**. To use LocalTunner:<br>
-    Install Localtunnel globally (requires NodeJS) to make it accessible anywhere:
-    ```
-    npm install -g localtunnel
-    ```
-   Start a webserver on some local port (eg http://localhost:5000) and use the command line interface to request a tunnel to your local server:
-   ```
-   lt --port 5000
-   ```
-   You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. Any requests will be routed to your local service at the specified port.
-
-4) Connect LISA to your local database:<br>
-     <br>
-     For privacy reasons, it's best to **use your personal Google account and create a new agent** for development purpose:
-     * Log out of all your Google Accounts and delete the information in your local storage before only logging in with your personal Google account to make sure you continue the next steps with the right account.
-     * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. **NOTE** Dialogflow logs in with the Google account you are logged in with automatically. Make sure this is with your personal account.
-     * Create a new agent. Besides adding a name, you should see the option to set the default language. Make sure the default language is *Dutch*. If you don't see this option. Refresh page and try again.
-     * Once a new agent is created, go to the settings of the agent, click on *Export and Import* and import the zip file from step 2.
-     * Enable Webhook in the fulfullment tab and fill in `<your local server URl>`/google-menus as URL<br>
-     * To integrate the agent with the Google Assistant, click on the *integrations* tab and go to Google Assistant. Check if all the intents are showing up. If not, add them manually (the intents should show up if you click on *add intent*). When you are finished, click on test. If everything is set up correctly, you directed to your Google Actions test environment.
-     * The agent you created is a new project in your [Google Actions](https://console.actions.google.com). Go to Google Actions and click on the name of the agent you created.
-     * Go to *Decide how your action is invoked*.
-     * Set up an invocation, preferrably 'de Kok' and save it.
-     * Make sure to set the language to Dutch (NL).
-     * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working.
-     <br>
-     <br>
-     <b>Possible Errors</b><br>
-     <b>The testing envrionment will not load</b> Does the testing not work, and you receive a <em>Permisson access denied</em> error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent in Dialogflow. Click on the *Share* tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
-     <br>
-     <br>
-     <b>Test envrionment works, but the menu isn't fetched?</b> If you are in your testing environment, but the fetch-menu intent doesn't work, fetch a new Serveo or Localtunnel link and connect that as your webhook.
-     
-
-5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey Google, praat met de kok' which means 'Hey Google, talk to the chef'
-
-6) Ask what the menu is for the day you made some items for. You can also ask for just the starter, main-course, dessert for a specific day.
-
-## Add changes
-<b>WARNING:</b> [this](https://dialogflow.cloud.google.com/#/agent/e4ee0583-d68d-4127-a8bd-49f3522ded28/intents) is the account used in production. Only make changes if a new backend version is deployed, otherwise you will break it<br>
-  **Production Account**<br>
-  Google ID: lisa.vitalis.assistant@gmail.com<br>
-  For the password, please contact Rein<br>
-  <br>
-If you made changes to the lisa dialogflow client and are satisfied with the outcome, make sure to:
-   * restore the fulfillment url to `https://immense-fjord-88389.herokuapp.com` (this is the back-end that's in development. It may be outdated, so check to make sure)
-   * export the settings as zip [here](https://dialogflow.cloud.google.com/#/editAgent)
-   * unpack the zip in the root directory you cloned this repository in
-   * ```
-      $ git commit
-      $ git push
-      ```
-   If you messed something up, you can just clone this repository as zip from github and upload it to the dialogflow client.
 
 # Dialogflow
   
@@ -139,6 +59,91 @@ When you are working with custom backend like Node.js with Express, you need to:
 ![webhook-api.png](./webhook-api.png)
 
 [Dialogflow docs](https://cloud.google.com/dialogflow/docs/)
+
+## Installation
+1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
+
+2) Download Zip File<br>
+   <b>For development purpose</b>:<br>
+   [Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.<br>
+   <br>
+   <b>For production purpose</b>:<br>
+   [Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the Dialogflow client master as zip.<br>
+   <br>
+   <b>Both</b>:<br>
+   There is no need to install anything. The zip you downloaded will be used to quickly set up DialogFlow.
+
+3) Make your local server available online using either Serveo, Localtunnel or a Heroku link<br>
+  To use **Serveo**, run this in your terminal window (it should give you an url):
+    ```
+    $ ssh -R 80:localhost:5000 serveo.net 
+    ```
+    You might need to type `yes` if a warning is thrown. The https link in green is your server URL<br>
+    <br>
+    Serveo is a nice tool to use while developing: https://serveo.net/
+    It streams your server to the adress Serveo sets up for you. You can use this adress in DialogFlow/fulfillment.
+    The link look likes this:(this one does not work)
+    https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
+    <br>
+    <br>
+   If Serveo doesn't provide you with an url, you can try **Localtunnel**. To use LocalTunner:<br>
+    Install Localtunnel globally (requires NodeJS) to make it accessible anywhere:
+    ```
+    npm install -g localtunnel
+    ```
+   Start a webserver on some local port (eg http://localhost:5000) and use the command line interface to request a tunnel to your local server:
+   ```
+   lt --port 5000
+   ```
+   You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. Any requests will be routed to your local service at the specified port.
+
+4) Connect LISA to your local database:<br>
+     <br>
+     For privacy reasons, it's best to **use your personal Google account and create a new agent** for development purpose:
+     * Log out of all your Google Accounts and delete the information in your local storage before only logging in with your personal Google account to make sure you continue the next steps with the right account.
+     * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. **NOTE** Dialogflow logs in with the Google account you are logged in with automatically. Make sure this is with your personal account.
+     * Create a new agent (top left of the page). Besides adding a name, you should see the option to set the default language. Make sure the default language is *Dutch*. If you don't see this option. Refresh page and try again.
+     * Once a new agent is created, go to the settings of the agent (the wheel next to your agent's name)
+     * Click on *Export and Import* and import the zip file from step 2. Don't forget to type *IMPORT* in the input form beneath it.
+     * Enable Webhook in the fulfullment tab and fill in `<your local server URl>/google-menus` as URL<br>
+     * To integrate the agent with the Google Assistant, click on the *integrations* tab on the left of the page, and go to Google Assistant.
+     * Add the intents by clicking on the form *add intent*. The intents that come with the zip file should show up as a drop down menu.
+     * When you are finished, click on *Test*. If everything is set up correctly, you directed to your Google Actions test environment.
+     * The agent you created is a new project in your [Google Actions](https://console.actions.google.com). Go to Google Actions and click on the name of the agent you created.
+     * Go to *Decide how your action is invoked*.
+     * Set up an invocation, preferrably 'de Kok' and save it. **NOTE**: if your language setting in your Google account isn't Dutch by default (or if you get an error), switch off the box *Match user's language setting*. In the *Google Assistant Voice* part, you should see *(NL-NL)* in the voice form.
+     * Make sure to set the language to Dutch (NL).
+     * In your [MyAccount](https://myaccount.google.com) page, Web/App activity and Chrome history must be turned on in order to have the location feature working.
+     * Test Again (Go to *Test* in the header of the page) <br>
+     <br>
+     <b>Possible Errors</b><br>
+     <b>The testing envrionment will not load</b> Does the testing not work, and you receive a <em>Permisson access denied</em> error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent in Dialogflow. Click on the *Share* tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
+     <br>
+     <br>
+     <b>Test envrionment works, but the menu isn't fetched?</b> If you are in your testing environment, but the fetch-menu intent doesn't work, fetch a new Serveo or Localtunnel link and connect that as your webhook.
+     
+
+5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey Google, praat met de kok' which means 'Hey Google, talk to the chef'
+
+6) Ask what the menu is for the day you made some items for. You can also ask for just the starter, main-course, dessert for a specific day.
+
+## Add changes
+<b>WARNING:</b> [this](https://dialogflow.cloud.google.com/#/agent/e4ee0583-d68d-4127-a8bd-49f3522ded28/intents) is the account used in production. Only make changes if a new backend version is deployed, otherwise you will break it<br>
+  **Production Account**<br>
+  Google ID: lisa.vitalis.assistant@gmail.com<br>
+  For the password, please contact Rein<br>
+
+If you made changes to the lisa dialogflow client and are satisfied with the outcome, make sure to:
+   * restore the fulfillment url to `https://immense-fjord-88389.herokuapp.com` (this is the back-end that's in development. It may be outdated, so check to make sure)
+   * export the settings as zip [here](https://dialogflow.cloud.google.com/#/editAgent)
+   * unpack the zip in the root directory you cloned this repository in
+   * ```
+      $ git commit
+      $ git push
+      ```
+   If you messed something up, you can just clone this repository as zip from github and upload it to the dialogflow client.
+
+
 
 
 
