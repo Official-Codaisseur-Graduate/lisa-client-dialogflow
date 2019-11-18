@@ -1,13 +1,10 @@
 # Introduction
-This repository is just a vcs of the current settings in DialogFlow. If you made changes to the lisa dialogflow client and are satisfied with the outcome, make sure to:
-   * restore the fulfillment url to `https://immense-fjord-88389.herokuapp.com`
-   * export the settings as zip [here](https://dialogflow.cloud.google.com/#/editAgent)
-   * unpack the zip in the root directory you cloned this repository in
-   * ```
-      $ git commit
-      $ git push
-      ```
-   If you messed something up, you can just clone this repository as zip from github and upload it to the dialogflow client.
+This repository is a version control system of the current settings in DialogFlow. It's part of the LISA Voice Assistant Project.
+
+# Repositories in the LISA-project
+- [LISA-server](https://github.com/Official-Codaisseur-Graduate/lisa-server)
+- [LISA-client](https://github.com/Official-Codaisseur-Graduate/lisa-client)
+- LISA Dialogflow - you are here!
 
 ## Installation
 1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
@@ -76,6 +73,17 @@ This repository is just a vcs of the current settings in DialogFlow. If you made
 5) Talk to the Google home assistant. This can also be the app on your mobile device as long as you log in with your account. Ask 'Hey Google, praat met de kok' which means 'Hey Google, talk to the chef'
 
 6) Ask what the menu is for the day you made some items for. You can also ask for just the starter, main-course, dessert for a specific day.
+
+## Add changes
+If you made changes to the lisa dialogflow client and are satisfied with the outcome, make sure to:
+   * restore the fulfillment url to `https://immense-fjord-88389.herokuapp.com` (this is the back-end that's in development. It may be outdated, so check to make sure)
+   * export the settings as zip [here](https://dialogflow.cloud.google.com/#/editAgent)
+   * unpack the zip in the root directory you cloned this repository in
+   * ```
+      $ git commit
+      $ git push
+      ```
+   If you messed something up, you can just clone this repository as zip from github and upload it to the dialogflow client.
 
 # Dialogflow
   
