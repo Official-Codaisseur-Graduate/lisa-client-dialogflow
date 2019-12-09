@@ -13,8 +13,8 @@ This readme file will introduce the fundamental concepts of DialogFlow and walk 
 
 ## Repositories in the LISA-project
 
-NOTE: Read the Docs for set-up and the latest status of the code - make sure to use the correct branch (development or any open branches that hasn’t been merged into development yet). Only merge into the master branch if all the codes in development are working AND you have already checked with Rein.<br>
-<br>
+NOTE: Read the Docs for set-up and the latest status of the code - make sure to use the correct branch (development or any open branches that hasn’t been merged into development yet). Only merge into the master branch if all the codes in development are working AND you have already checked with Rein.
+
 - [LISA-server](https://github.com/Official-Codaisseur-Graduate/lisa-server)
 - [LISA-client](https://github.com/Official-Codaisseur-Graduate/lisa-client)
 - LISA Dialogflow - you are here!
@@ -78,14 +78,17 @@ When you are working with custom backend like Node.js with Express, you need to:
 
 1) First, make sure to set up the backend [server](https://github.com/Official-Codaisseur-Graduate/lisa-server) if you didn't already
 
-2) Download Zip File<br>
-   There is no need to install anything. Simply download the zip so that it will be used to quickly set up Dialogflow for you.<br>
-   <b>For development purpose</b>:<br>
-   [Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.<br>
-   <br>
-   <b>For production purpose</b>:<br>
-   [Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the Dialogflow client master as zip.<br>
-   <br>
+2) Download Zip File
+
+   There is no need to install anything. Simply download the zip so that it will be used to quickly set up Dialogflow for you.
+   
+   <b>For development purpose</b>:
+   
+   [Download](https://codeload.github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/zip/development) the Dialogflow client developer as zip.
+   
+   <b>For production purpose</b>:
+   
+   [Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the Dialogflow client master as zip.
 
 3) Dialogflow needs to connect to your backend server through a *public* URL, meaning that e.g. localhost:4000 simply won't work. There are three ways to make your local server public, using either Serveo, Localtunnel or a Heroku link<br>
      * To use **Serveo**, run this in your terminal window (it should give you an url):
