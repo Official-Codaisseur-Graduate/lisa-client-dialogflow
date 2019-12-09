@@ -1,4 +1,4 @@
-## What this repository is about
+# Dialogflow Client
 
 This repository is the version control system of the current settings in Dialogflow. It is one of the three parts of the LISA Voice Assistant Project among the client and server repositories. Dialogflow is meant to be used by Vitalis elderlies to ask for the menu of the nearby kitchen(s). User voice input sends requests to and fetches data from the backend server.
 
