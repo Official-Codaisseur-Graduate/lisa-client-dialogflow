@@ -88,7 +88,25 @@ When you are working with custom backend like Node.js with Express, you need to:
    <b>For production purpose</b>:
    [Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the Dialogflow client master as zip.
 
-3) Dialogflow needs to connect to your backend server through a *public* URL, meaning that e.g. localhost:4000 simply won't work. There are three ways to make your local server public, using either Serveo, Localtunnel or a Heroku link.
+3) We need to turn the local server url into a public url for testing. Dialogflow needs to connect to your backend server through a *public* URL, meaning that e.g. localhost:5000 simply won't work. There are three ways to make your local server public, using either Localtunnel, Serveo, or a Heroku link.
+
+     * To use **LocalTunnel**:
+     
+       Install Localtunnel globally (requires NodeJS) to make it accessible anywhere:
+       ```
+       npm install -g localtunnel
+       ```
+       **Possible error**: Denied access? 
+       ```
+       sudo chown -R \$USER /usr/local/lib/node_modules
+       sudo npm install -g locatunnel
+       ```
+       
+       Start a webserver on some local port (eg. http://localhost:5000) and use the command line interface to request a tunnel to your local server:
+       ```
+       lt --port 5000
+       ```
+       You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. 
 
      * To use **Serveo**, run this in your terminal window (it should give you an url):
        ```
@@ -100,32 +118,18 @@ When you are working with custom backend like Node.js with Express, you need to:
        It streams your server to the adress Serveo sets up for you. You can use this adress in Dialogflow -> fulfillment.
        The link look likes this:(this one does not work)
        https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
-       
-     * If Serveo doesn't provide you with an url, you can try **Localtunnel**. To use LocalTunner:
-     
-       Install Localtunnel globally (requires NodeJS) to make it accessible anywhere:
-       ```
-       npm install -g localtunnel
-       ```
-       Start a webserver on some local port (eg http://localhost:5000) and use the command line interface to request a tunnel to your local server:
-       ```
-       lt --port 5000
-       ```
-       You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. 
    
-     * Either way, when you receive a url, go to Dialogflow -> Fulfillment tab on the left -> copy and paste it in the Webhook URL while *always* ending with the endpoint /google-menus (e.g. https://gqgh.localtunnel.me/google-menus). Any requests will be routed to your local service at the specified port.
-   
-       Later when you test Dialogflow in the test environment, you may receive this error "MalformedResponse". When you do, you need to retrieve a new url and update the webhook url before you test again.
+     * Hold onto the url you receive. We will use it in the next step.
 
 4) Connect LISA to your local database:
 
      For privacy reasons, it's best to **use your personal Google account and create a new agent** for development purpose:
      * Log out of all your Google Accounts and delete the information in your local storage before only logging in with your personal Google account to make sure you continue the next steps with the right account.
-     * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in. **NOTE** Dialogflow logs in with the Google account you are logged in with automatically. Make sure this is with your personal account.
-     * Create a new agent (top left of the page). Besides adding a name, you should see the option to set the default language. Make sure the default language is *Dutch*. If you don't see this option. Refresh page and try again.
+     * Go to [Dialogflow](https://dialogflow.cloud.google.com/) and log in.
+     * Create a new agent (top left of the page). Besides adding a name (whatever name you like), you should see the option to set the default language. Make sure the default language is *Dutch*. If you don't see this option. Refresh page and try again.
      * Once a new agent is created, go to the settings of the agent (the wheel next to your agent's name)
      * Click on *Export and Import* and import the zip file from step 2. Don't forget to type *IMPORT* in the input form beneath it.
-     * Enable Webhook in the fulfullment tab and fill in `<your local server URl>/google-menus` as URL.
+     * Enable Webhook in the fulfullment tab and fill in `<local server URI you received from localtunnel, serveo, or heroku>/google-menus` as URL.
      * To integrate the agent with the Google Assistant, click on the *integrations* tab on the left of the page, and go to Google Assistant.
      * Add the intents by clicking on the form *add intent*. The intents that come with the zip file should show up as a drop down menu. Select all of them.
      * When you are finished, click on *Test*. If everything is set up correctly, you will be directed to your Google Actions test environment.
@@ -133,20 +137,21 @@ When you are working with custom backend like Node.js with Express, you need to:
      * Go to *Decide how your action is invoked*.
      * Set up an invocation, preferrably 'de Kok' and save it. **NOTE**: if your language setting in your Google account isn't Dutch by default (or if you get an error), switch off the box *Match user's language setting*. In the *Google Assistant Voice* part, you should see *(NL-NL)* in the voice form. In addition, after you hit "save" the form may throw an error saying the name is invalid. This may be a bug. As long as you see the pop-up 'Invocation details saved successfully', move on.
      * Make sure to set the language to Dutch (NL).
-     * Testing: First input 'Praat met de Kok', after you get a response, try 'Wat eten we vanavond'. If you get an error "MalformedResponse", refresh your webhook url.
      * In your [MyAccount](https://myaccount.google.com) page, navigate to privacy & personalization, Web/App activity and history must be turned on in order to have the location feature working.
-     * Test Again (Go to *Test* in the header of the page)
+     * **Testing**: In the Google Actions test environment, first input 'Praat met de Kok' in the chat bar. Google assistant might ask you for the location, input 'Ja'. Try 'Wat eten we vanavond', if you get a response 'try another day', that means the menu for that day is empty and it works! If you get an error "MalformedResponse", refresh your webhook url.
      
-     <b>Possible Errors:</b>
+     **Possible Errors**:
      
-     <b>The testing envrionment will not load:</b> 
+     **MalformedResponse**: When you test Dialogflow in the test environment, you may receive this error. When you do, you need to run localtunnel or serveo again to get a new url and update the webhook url before you test again.
+     
+     **The testing envrionment will not load**: 
      Does the testing not work, and you receive a <em>Permisson access denied</em> error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent in Dialogflow. Click on the *Share* tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
      
-     <b>Test envrionment works, but the menu isn't fetched?</b> 
+     **Test envrionment works, but the menu isn't fetched?** 
      If you are in your testing environment, but the fetch-menu intent doesn't work, fetch a new Serveo or Localtunnel link and connect that as your webhook.
      
 
-5) You can test the app with Google Assistant on your device as long as you're logged in with your personal Google account. Ask 'Hey Google, praat met de kok' which means 'Hey Google, talk to the chef'.
+5) You can test the app with Google Assistant on your device as long as you're logged in with your personal Google account. Type or ask 'Hey Google, praat met de kok' (which means 'Hey Google, talk to the chef').
 
 6) Ask what the menu is for the day you made some items for (e.g. 'Wat eten we vanavond?'). You can also ask for just the starter, main-course, or dessert for a specific day.
 
