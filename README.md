@@ -88,7 +88,7 @@ When you are working with custom backend like Node.js with Express, you need to:
    <b>For production purpose</b>:
    [Download](https://github.com/Official-Codaisseur-Graduate/lisa-client-dialogflow/archive/master.zip) the Dialogflow client master as zip.
 
-3) We need to turn the local server url into a public url for testing. Dialogflow needs to connect to your backend server through a *public* URL, meaning that e.g. localhost:5000 simply won't work. There are three ways to make your local server public, using either Localtunnel, Serveo, or a Heroku link.
+3) Dialogflow needs to connect to your backend server through a *public* URL, meaning that e.g. localhost:5000 simply won't work. We need to turn the local server url into a public url for testing. There are three ways to make your local server public, using either Localtunnel, Serveo, or a Heroku link.
 
      * To use **LocalTunnel**:
      
@@ -96,7 +96,7 @@ When you are working with custom backend like Node.js with Express, you need to:
        ```
        npm install -g localtunnel
        ```
-       **Possible error**: Denied access? 
+       *Possible error*: Denied access? 
        ```
        sudo chown -R \$USER /usr/local/lib/node_modules
        sudo npm install -g locatunnel
