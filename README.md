@@ -1,6 +1,6 @@
-# Dialogflow Client
+# Dialogflow client
 
-This repository is the version control system of the current settings in Dialogflow. It is one of the three parts of the LISA Voice Assistant Project among the client and server repositories. Dialogflow is meant to be used by Vitalis elderlies to ask for the menu of the nearby kitchen(s). User voice input sends requests to and fetches data from the backend server.
+This repository contains the Dialogflow client, which is one of three parts of the LISA Voice Assistant Project among the frontend client and backend server repositories. Dialogflow is meant to be used by Vitalis elderlies to ask for the menu of the nearby kitchen(s). User voice input sends requests to and fetches data from the backend server.
 
 This readme file will introduce the fundamental concepts of DialogFlow and walk you through the installation process. If still in doubt, visit the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/).
 
@@ -23,13 +23,13 @@ NOTE: Read the Docs for set-up and the latest status of the code - make sure to 
   
 Dialogflow (formerly Api.ai) is a Google-owned developer of human–computer interaction technologies based on natural language conversations. You can develop a virtual buddy for Android, iOS, and Windows Phone smartphones that performs tasks and answers users’ questions in a natural language. It also created a natural language processing engine that incorporates conversation context like dialogue history, location and user preferences.
 
-If you intent to understand and improve on the Dialogflow features of Project Lisa, I recommend a short YouTube series to get you started:
+If you intent to understand and improve on the Dialogflow features of Project Lisa, I recommend a short and sweet YouTube series to get you started:
 
 - [Part 1: Intents](https://www.youtube.com/watch?v=9aHusGxntPw)
 - [Part 2: Entities](https://www.youtube.com/watch?v=kzdL6GxJ_WY)
 - [Part 3: Dialog control](https://www.youtube.com/watch?v=-tOamKtmxdY)
 
-Alternatively, the following sections will give you a basic understanding of Dialogflow.
+Alternatively, the following sections will give you an overview of Dialogflow.
 
 ### Agents
 
