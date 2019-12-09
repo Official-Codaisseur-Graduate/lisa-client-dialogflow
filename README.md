@@ -1,4 +1,4 @@
-# What this repository is about
+## What this repository is about
 
 This repository is the version control system of the current settings in Dialogflow. It is one of the three parts of the LISA Voice Assistant Project among the client and server repositories. Dialogflow is meant to be used by Vitalis elderlies to ask for the menu of the nearby kitchen(s). User voice input sends requests to and fetches data from the backend server.
 
@@ -19,7 +19,7 @@ NOTE: Read the Docs for set-up and the latest status of the code - make sure to 
 - [LISA-client](https://github.com/Official-Codaisseur-Graduate/lisa-client)
 - LISA Dialogflow - you are here!
 
-# What is Dialogflow
+## What is Dialogflow
   
 Dialogflow (formerly Api.ai) is a Google-owned developer of human–computer interaction technologies based on natural language conversations. You can develop a virtual buddy for Android, iOS, and Windows Phone smartphones that performs tasks and answers users’ questions in a natural language. It also created a natural language processing engine that incorporates conversation context like dialogue history, location and user preferences.
 
@@ -31,13 +31,13 @@ If you intent to understand and improve on the Dialogflow features of Project Li
 
 Alternatively, the following sections will give you a basic understanding of Dialogflow.
 
-## Agents
+### Agents
 
 An Agent is a specific virtual buddy, chatbot or skill. In this case, LISA. There is an invocation to start it: “Hey Google, praat met de keuken” or “Hey Google, talk to the kitchen” will trigger “Hallo, ik ben Lisa. Wat is uw vraag?”.
 
 [Edit invocation here if need be](https://console.actions.google.com/u/1/project/vitalis-lisnji/invocation/)
 
-## Intents
+### Intents
 
 An intent maps what a user says with what your agent does. To fetch the menu, LISA has the intent ‘fetch_menu’.
 
@@ -49,23 +49,23 @@ Example questions:
 
 Date and course information are sent along with the request to the server. If none are specified (“Wat eten we?”), the backend route will assume full meal for today. 
 
-## Entities
+### Entities
 
 An Entity is a property which can be used by Dialogflow to extract values from the user request. It filters information from natural speech, and transforms it to a standardized format. LISA uses two entities:
 * @sys.date-time, date, a standard Dialogflow entity 
 * @gerecht, type, a custom entity
 
-## What is Fulfillment?
+### What is Fulfillment?
 
 Dialogflow receives a request from the user (along with the entity values to be sent with the request) and now needs to request the information from the database to fulfill the user request. Now this data will be sent to our **webhook** so that the required information can be fetched (this will be dependent on your implementation). Once the webhook has fetched our required information it will send it back to Dialogflow so that it can be presented to the user in the desired manner.
 
 ![webhook-fulfimment.png](./webhook-fulfimment.png)
 
-## How Dialogflow connects with Backend App
+### How Dialogflow connects with Backend App
 
 ![dialoglow-to-backend.jpg](./dialoglow-to-backend.jpg)
 
-## What is a Webhook?
+### What is a Webhook?
 
 When you are working with custom backend like Node.js with Express, you need to:
 * turn on the option Enable webhook, and
