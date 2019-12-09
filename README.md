@@ -129,7 +129,7 @@ When you are working with custom backend like Node.js with Express, you need to:
      * Create a new agent (top left of the page). Besides adding a name (whatever name you like), you should see the option to set the default language. Make sure the default language is *Dutch*. If you don't see this option. Refresh page and try again.
      * Once a new agent is created, go to the settings of the agent (the wheel next to your agent's name)
      * Click on *Export and Import* and import the zip file from step 2. Don't forget to type *IMPORT* in the input form beneath it.
-     * Enable Webhook in the fulfullment tab and fill in `<local server URI you received from localtunnel, serveo, or heroku>/google-menus` as URL.
+     * Enable Webhook in the fulfullment tab and fill in `<local server URL you received from localtunnel, serveo, or heroku>/google-menus` as URL.
      * To integrate the agent with the Google Assistant, click on the *integrations* tab on the left of the page, and go to Google Assistant.
      * Add the intents by clicking on the form *add intent*. The intents that come with the zip file should show up as a drop down menu. Select all of them.
      * When you are finished, click on *Test*. If everything is set up correctly, you will be directed to your Google Actions test environment.
