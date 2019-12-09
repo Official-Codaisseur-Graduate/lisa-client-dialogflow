@@ -4,7 +4,7 @@ This repository contains the Dialogflow client, which is one of three parts of t
 
 This readme file will introduce the fundamental concepts of DialogFlow and walk you through the installation process. If still in doubt, visit the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/).
 
-## Table of contents:
+## Table of contents
 
 - **[Repositories in the LISA-project](#repositories-in-the-LISA-project)**
 - **[What is Dialogflow](#what-is-dialogflow)**
