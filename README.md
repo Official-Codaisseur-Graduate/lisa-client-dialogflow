@@ -1,12 +1,13 @@
-# Introduction
-This repository is the version control system of the current settings in DialogFlow. It's part of the LISA Voice Assistant Project.
+# What this repository is about
+This repository is the version control system of the current settings in DialogFlow. It is one of the three parts of the LISA Voice Assistant Project among the client and server repositories. DialogFlow is meant to be used by Vitalis elderlies to ask for the menu of the nearby kitchen(s). User voice input sends requests to and fetches data from the backend server.
 
-## Contents of this ReadMe-file
-- Introduction
-- Repositories in the LISA-project
-- Information about Dialogflow
-- Installation Guide
-- Add Changes
+This readme file will introduce the fundamental concepts of DialogFlow and walk you through the installation process.
+
+## Table of contents:
+- **[Repositories in the LISA-project](#repositories-in-the-LISA-project)**
+- **Information about Dialogflow**
+- **Installation Guide**
+- **Add Changes**
 
 ## Repositories in the LISA-project
 NOTE: Read the Docs for set-up and the latest status of the code - make sure to use the correct branch (development or any open branches that hasn’t been merged into development yet). Only merge into the master branch if all the codes in development are working AND you have already checked with Rein.<br>
