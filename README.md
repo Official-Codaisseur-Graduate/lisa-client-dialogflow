@@ -88,32 +88,32 @@ When you are working with custom backend like Node.js with Express, you need to:
    <br>
 
 3) Dialogflow needs to connect to your backend server through a *public* URL, meaning that e.g. localhost:4000 simply won't work. There are three ways to make your local server public, using either Serveo, Localtunnel or a Heroku link<br>
-  * To use **Serveo**, run this in your terminal window (it should give you an url):
-    ```
-    $ ssh -R 80:localhost:5000 serveo.net 
-    ```
-    You might need to type `yes` if a warning is thrown. The https link in green is your server URL<br>
-    <br>
-    Serveo is a nice tool to use while developing: https://serveo.net/
-    It streams your server to the adress Serveo sets up for you. You can use this adress in Dialogflow -> fulfillment.
-    The link look likes this:(this one does not work)
-    https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
-    <br>
-    <br>
-  * If Serveo doesn't provide you with an url, you can try **Localtunnel**. To use LocalTunner:<br>
-    Install Localtunnel globally (requires NodeJS) to make it accessible anywhere:
-    ```
-    npm install -g localtunnel
-    ```
-   Start a webserver on some local port (eg http://localhost:5000) and use the command line interface to request a tunnel to your local server:
-   ```
-   lt --port 5000
-   ```
-   You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. 
+     * To use **Serveo**, run this in your terminal window (it should give you an url):
+       ```
+       $ ssh -R 80:localhost:5000 serveo.net 
+       ```
+       You might need to type `yes` if a warning is thrown. The https link in green is your server URL<br>
+       <br>
+       Serveo is a nice tool to use while developing: https://serveo.net/
+       It streams your server to the adress Serveo sets up for you. You can use this adress in Dialogflow -> fulfillment.
+       The link look likes this:(this one does not work)
+       https://dialogflow.cloud.google.com/#/agent/`<random numbers and letters>`/fulfillment
+       <br>
+       <br>
+     * If Serveo doesn't provide you with an url, you can try **Localtunnel**. To use LocalTunner:<br>
+       Install Localtunnel globally (requires NodeJS) to make it accessible anywhere:
+       ```
+       npm install -g localtunnel
+       ```
+       Start a webserver on some local port (eg http://localhost:5000) and use the command line interface to request a tunnel to your local server:
+       ```
+       lt --port 5000
+       ```
+       You will receive a url, for example https://gqgh.localtunnel.me, that you can share with anyone for as long as your local instance of lt remains active. 
    
-   * Either way, when you receive a url, go to Dialogflow -> Fulfillment tab on the left -> copy and paste it in the Webhook URL while *always* ending with the endpoint /google-menus (e.g. https://gqgh.localtunnel.me/google-menus). Any requests will be routed to your local service at the specified port.
+     * Either way, when you receive a url, go to Dialogflow -> Fulfillment tab on the left -> copy and paste it in the Webhook URL while *always* ending with the endpoint /google-menus (e.g. https://gqgh.localtunnel.me/google-menus). Any requests will be routed to your local service at the specified port.
    
-   Later when you test Dialogflow in the test environment, you may receive this error "MalformedResponse". When you do, you need to retrieve a new url and update the webhook url before you test again.
+       Later when you test Dialogflow in the test environment, you may receive this error "MalformedResponse". When you do, you need to retrieve a new url and update the webhook url before you test again.
 
 4) Connect LISA to your local database:<br>
      <br>
@@ -135,11 +135,13 @@ When you are working with custom backend like Node.js with Express, you need to:
      * In your [MyAccount](https://myaccount.google.com) page, navigate to privacy & personalization, Web/App activity and history must be turned on in order to have the location feature working.
      * Test Again (Go to *Test* in the header of the page) <br>
      <br>
-     <b>Possible Errors</b><br>
-     <b>The testing envrionment will not load</b> Does the testing not work, and you receive a <em>Permisson access denied</em> error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent in Dialogflow. Click on the *Share* tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
+     <b>Possible Errors:</b><br>
+     <b>The testing envrionment will not load:</b> 
+     Does the testing not work, and you receive a <em>Permisson access denied</em> error? Most likely the accounts on Dialogflow and your Google Actions are not the same. You can check this by going to the settings of your agent in Dialogflow. Click on the *Share* tab, and you see the Google Account of the person who has access to the agent. If this is not your personal account remove the agent, and start again and make sure to be logged out and clean your local storage first before trying again.
      <br>
      <br>
-     <b>Test envrionment works, but the menu isn't fetched?</b> If you are in your testing environment, but the fetch-menu intent doesn't work, fetch a new Serveo or Localtunnel link and connect that as your webhook.
+     <b>Test envrionment works, but the menu isn't fetched?</b> 
+     If you are in your testing environment, but the fetch-menu intent doesn't work, fetch a new Serveo or Localtunnel link and connect that as your webhook.
      
 
 5) You can test the app with Google Assistant on your device as long as you're logged in with your personal Google account. Ask 'Hey Google, praat met de kok' which means 'Hey Google, talk to the chef'.
@@ -160,7 +162,7 @@ If you made changes to the lisa dialogflow client and are satisfied with the out
       $ git commit
       $ git push
       ```
-   If you messed something up, you can just clone this repository as zip from github and upload it to the dialogflow client.
+If you messed something up, you can just clone this repository as zip from github and upload it to the dialogflow client.
 
 
 
